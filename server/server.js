@@ -14,23 +14,12 @@ app.post('/api/create', (req, res) => {
 });
 
 app.get('/api/read', (req, res) => {
-    const query = req.query;
      const ObjectJohn = {
         name: "JohnDoe",
         age: 30
     }
-    const ObjectRick = {
-        name: "Rick",
-        age: 25
-    }
-
-    if (query.name === 'JohnDoe') {
-        res.json(ObjectJohn);
-    } else if (query.name === 'Rick') {
-        res.json(ObjectRick);
-    } else {
-        res.json({ message: 'Object not found' });
-    }
+    res.json(ObjectJohn);
+    
 });
 
 app.put('/api/update', (req, res) => {
